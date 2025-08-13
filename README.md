@@ -17,7 +17,7 @@
 - 悬停动画效果
 
 ## 访问地址
-GitHub Pages: https://[您的GitHub用户名].github.io/[仓库名]/
+GitHub Pages: https://liufifi-byte.github.io/personal-homepage/
 
 ## 联系方式
 - 微信：Yi202508

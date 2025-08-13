@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">Xinyi Liu</div>
+            <div class="nav-links">
+                <a href="#education">教育</a>
+                <a href="#passions">兴趣</a>
+                <a href="#internships">实习</a>
+                <a href="#connect">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 个人照片展示部分（重构为个人介绍） -->
+    <section class="photo-gallery">
+        <div class="intro-container">
+            <img class="intro-avatar" src="images/WechatIMG142.jpg" alt="Xinyi Liu">
+            <h1 class="intro-name">刘心怡</h1>
+            <h2 class="intro-english-name">Xinyi Liu</h2>
+            <p class="intro-dream">梦想成为摄影师 ｜ 世界是个巨大的排列组合</p>
+        </div>
+    </section>
+
+    <!-- 教育经历部分 -->
+    <section id="education" class="education">
+        <h2>教育经历</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-icon bupt-logo">
+                </div>
+                <div class="education-content">
+                    <h3>北京邮电大学</h3>
+                    <p class="major">信息管理与信息系统</p>
+                    <p class="degree">本科</p>
+                    <p class="year">2019-2023</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-icon bupt-logo">
+                </div>
+                <div class="education-content">
+                    <h3>北京邮电大学</h3>
+                    <p class="major">通信工程</p>
+                    <p class="degree">本科</p>
+                    <p class="year">2023-2025</p>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <div class="education-icon cuhk-logo">
+                </div>
+                <div class="education-content">
+                    <h3>香港中文大学</h3>
+                    <p class="major">管理科学与工程</p>
+                    <p class="degree">硕士</p>
+                    <p class="year">2025-2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 兴趣爱好部分 -->
+    <section id="passions" class="passions">
+        <h2>My Passions</h2>
+        <div class="passions-grid">
+            <a href="cycling.html" class="passion-card">
+                <i class="fas fa-bicycle"></i>
+                <h3>骑行</h3>
+                <p>探索城市每个角落<br>享受速度与自由的快感</p>
+            </a>
+            <a href="coffee.html" class="passion-card">
+                <i class="fas fa-coffee"></i>
+                <h3>咖啡</h3>
+                <p>品味生活中的美好时光<br>感受咖啡带来的愉悦</p>
+            </a>
+            <a href="food.html" class="passion-card">
+                <i class="fas fa-utensils"></i>
+                <h3>美食</h3>
+                <p>探索味蕾的旅程<br>记录生活的美味时刻</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 实习经历部分 -->
+    <section id="internships" class="internships">
+        <h2>实习经历</h2>
+        <div class="internships-grid">
+            <div class="internship-card baidu">
+                <div class="internship-card-content" onclick="openModal('baiduModal')">
+                <div class="company-logo">
+                    <i class="company-icon"></i>
+                </div>
+                <h3>百度</h3>
+                <div class="internship-content">
+                    <p class="position">产品运营</p>
+                    <p class="duration">2024.1-2024.4</p>
+                    <p class="review">一句话锐评：工位大！</p>  
+                </div>
+                </div>
+            </div>
+
+            <div class="internship-card kuaishou">
+                <div class="internship-card-content" onclick="openModal('kuaishouModal')">
+                <div class="company-logo">
+                    <i class="company-icon"></i>
+                </div>
+                <h3>快手</h3>
+                <div class="internship-content">
+                    <p class="position">策略产品经理</p>
+                    <p class="duration">2024.4-2024.9</p>
+                    <p class="review">一句话锐评：年轻氛围好！</p>  
+                </div>
+                </div>
+            </div>
+
+            <div class="internship-card xiaomi">
+                <div class="internship-card-content" onclick="openModal('xiaomiModal')">
+                <div class="company-logo">
+                    <i class="company-icon"></i>
+                </div>
+                <h3>小米</h3>
+                <div class="internship-content">
+                    <p class="position">小爱同学AI产品经理</p>
+                    <p class="duration">2024.10-2025.3</p>
+                    <p class="review">一句话锐评：饭好吃！</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="internship-card meituan">
+                <div class="internship-card-content" onclick="openModal('meituanModal')">
+                <div class="company-logo">
+                    <i class="company-icon"></i>
+                </div>
+                <h3>美团</h3>
+                <div class="internship-content">
+                    <p class="position">产品经理/AI产品经理</p>
+                    <p class="duration">2025.3-2025.8</p>
+                    <p class="review">一句话锐评：每天必看学城文章！</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实习经历弹窗 -->
+    <div id="baiduModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>百度实习经历</h2>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>日常运营：</strong>负责百度云智教育产品的全周期日常运营和产品的数据统计与数据分析。</li>
+                    <li><strong>系统设计：</strong>设计新的产品系统，包括后台管理系统、学校端系统和学生端系统，撰写prd文档。</li>
+                    <li><strong>竞品分析：</strong>积极收集市场信息，对同类竞品进行深入分析并与政府、竞品公司、合作公司进行交流，帮助团队调整产品方向。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="kuaishouModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>快手实习经历</h2>
+            <p class="modal-subtitle">（第一段产品实习，开始了解产品经理这个职位）</p>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>新产品搭建与功能迭代：</strong>从0-1深度参与海外新产品搭建，重点负责主页、内容详情页和个人信息页的搭建；调研相关竞品，针对竞品模块进行产品的功能迭代。</li>
+                    <li><strong>深度参与首页改版：</strong>根据产品页面元素的点击率和转化率数据，对产品首页进行改版迭代，突出高转化率模块，设计埋点方案并通过SQL走查，ab实验关键数据指标显著增长。</li>
+                    <li><strong>确定产品算法逻辑：</strong>重点负责内容详情页评论区搭建、评论区算法逻辑的设计、参与主页推荐算法逻辑的设计。</li>
+                    <li><strong>日常监控：</strong>通过SQL分析页面和元素的点击率、转化率，制作数据漏斗，对产品下单进行溯源分析；确定数据口径，制作BI数据可视化看板，对产品日常数据进行监控，并对异常数据进行归因分析。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="xiaomiModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>小米实习经历</h2>
+            <div class="modal-body">
+                <ul>
+                    <li><strong>用户反馈分析：</strong>独立负责用户反馈部分，对于P00事故及时响应，并从用户反馈中收集产品优化需求，累计优化屏幕翻译横屏适配、增加自动识别接口、agent语音播报等需求。</li>
+                    <li><strong>Agent策略制定：</strong>针对agent内大模型无法进行小语种单词发音的情况，设计出卡片的策略方案；针对特定询问，确定回复策略和tts播报内容；对大模型的效果进行走查，总结一期模型的问题，提出优化方案，并根据优化方案输出二期模型。</li>
+                    <li><strong>产品功能设计：</strong>针对线上卡片存在的不足，确定新的卡片样式和展示策略；优化查词翻译时的翻译app样式，补充跳转逻辑；新增日韩查词能力，针对供应商返回的结果确定线上展示策略和系列样式，补齐线上日韩翻译空缺。</li>
+                    <li><strong>翻译垂域成本优化：</strong>梳理集团内翻译成本，改进成本看板并验收看板数据；推进空音频过滤的技术方案，预估减少成本20%。</li>
+                    <li><strong>翻译能力优化：</strong>定期收集用户效果反馈，对部分示例进行召回与标注，与算法工程师沟通迭代模型；构建评测集，确定评分标准，对中英文本翻译进行评测，并切换agent内的模型以提升翻译效果。</li>
+                    <li><strong>项目管理：</strong>为满足欧盟新规，作为主导产品经理推动集团内翻译业务的无障碍改造。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="meituanModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>美团实习经历</h2>
+            <p class="modal-subtitle">（成长曲线非常陡峭，独立own了很多需求，大量跨部门合作，产品经理真正入门）</p>
+            <div class="modal-body">
+                <h3>产品经理 - 美团微信小程序</h3>
+                <h4>流量获取</h4>
+                <p>为了满足香港用户北上消费需求，与微信支付（香港）合作，将美团小程序接入香港微信钱包中。与多业务沟通，沟通解决该场景下首页与二级页间地址组件不一致的问题，新增该渠道数据看板，监控DAU、订单量、GMV等数据，累计新增新客数30000+。</p>
+                
+                <h4>转化率提升</h4>
+                <p>为提升DAU和订单量，新增/迭代产品能力和供给。</p>
+                <ul>
+                    <li><strong>外卖大额券提醒横幅：</strong>为满足夏季大促需求，与外卖用增合作，新增大额券提醒横幅。横幅曝光点击率约8.5%。</li>
+                    <li><strong>CLC新客专区横卡：</strong>在美团小程序首页中通位置新增新客一分购横卡；新增约日均1.2w单的首页订单量，提升约0.5%的新客转化率。</li>
+                    <li><strong>拼好饭接入美团小程序feed流/搜索：</strong>与拼好饭、推荐和搜索合作，将拼好饭接入到美团小程序的首页推荐和搜索场景中。</li>
+                    <li><strong>首页feed流地址参数迭代：</strong>针对首页feed流推荐位置不精准的历史逻辑，梳理同城异城场景下的不同维度地址，将首页用户所选的参数传入到feed流中，提升feed流的推荐精准率。AB实验中首页feed流各项指标显著正向，GTV增长约6%。</li>
+                    <li><strong>新增会员红包标识：</strong>针对L4级以上会员，对红包卡券页的会员专属券展示会员标识，强化会员心智。</li>
+                </ul>
+                
+                <h4>基础产品能力迭代</h4>
+                <p>为解决首页和个人中心页曝光数不匹配的问题，梳理页面刷新时机，并调整个人中心页刷新时机；与业务沟通，采用半屏跳转方案减少小程序包体积。</p>
+                
+                <h3>AI产品经理 - 商场AI问问</h3>
+                <h4>产品规模化推广方案制定</h4>
+                <p>为了将商场AI问问推向全国，基于商场AI前期的试点经验，从数据、模块和功能三个层面构建商场AI的规模化能力。对猜你想问模块采用逻辑匹配和权重排序法进行候选集的推荐；搭建工作流并撰写prompt，制定适用于全国商场的欢迎语策略。</p>
+                
+                <h4>功能需求迭代</h4>
+                <p>在商场AI内接入地图能力，增加复制和点击拨打电话功能。</p>
+                
+                <h4>模型优化</h4>
+                <p>针对一些推荐错误、重复推荐和推荐不足的case，优化prompt，减少模型badcase率。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 社交媒体链接 -->
+    <footer id="connect" class="social-links">
+        <p>联系我 →</p>
+        <div class="social-icons">
+            <div class="icon-wrapper">
+                <i class="fab fa-weixin"></i>
+                <span class="contact-info">微信：Yi202508</span>
+            </div>
+            <div class="icon-wrapper">
+                <a href="mailto:lxinyi@bupt.edu.cn"><i class="fas fa-envelope"></i></a>
+                <span class="contact-info">邮箱：lxinyi@bupt.edu.cn</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
